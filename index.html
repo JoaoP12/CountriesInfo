@@ -10,13 +10,27 @@
         <script type="text/javascript" src="./script.js"></script>
     </head>
     <body>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container justify-content-start">
+              <a class="navbar-brand" href="https://countries-info-sage.vercel.app/">Home</a>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Inspirações
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="https://paises.ibge.gov.br/#/">IBGE</a></li>
+                  <li><a class="dropdown-item" href="https://brasilescola.uol.com.br/geografia/paises.htm">Brasil Escola</a></li>
+                  <li><a class="dropdown-item" href="https://conhecimentocientifico.com/paises-do-mundo-ordem-alfabetica/">Conhecimento científico</a></li>
+                </ul>
+              </li>
+            </nav>
         <div class="container p-3">
             <header>
-                <div style="text-align: center;background-color: #3A98BA;" class="card p-3">
-                    <h1 style="color:white;">InfoCountries</h1>
-                    <img class="card-img-top mx-auto" style="max-width: 640px; max-height: 317px;" src="./Paises.png" alt="...">
+                <div class="card p-3 cardprincipal">
+                    <h1 class="titulo">InfoCountries</h1>
+                    <img class="card-img-top mx-auto imgprincipal" src="./Paises.png" alt="Imagem de todos os Paises">
                     <div class="card-body w-50 mx-auto">
-                        <h5 style="text-align: center;" class="card-title">InfoCountries</h5>
+                        <h5 class="card-title titulocard">InfoCountries</h5>
                         <p>
                             Atualmente existem 193 países
                         </p>
@@ -28,15 +42,14 @@
                         </p>
                         <p></p>
                         <p class="card-text">Caso queira conhecer algum, basta escrever o nome dele abaixo, mas precisa ser em inglês. Se não souber, use o tradutor
-                            <a style="color: white;" href="https://translate.google.com" target="_blank">AQUI</a>
+                            <a class="link" href="https://translate.google.com" target="_blank">AQUI</a>
                         </p>
                         <input type="text" id="country-name">
                         <input class="btn btn-primary " type="button" value="Buscar" onclick="buscarPais()">
                     </div>
                 </div>
-                <h3></h3>
             </header>
-            <div style="text-align: center; color: red;" id="error">
+            <div class="error" id="error">
                 <h4 id="error-msg">País não encontrado</h4>
             </div>
             <div id="countries-info" class="d-flex flex-wrap">
@@ -62,5 +75,10 @@
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <footer>
+            <p>
+                ©Copyright Célio, João e Sara.
+            </p>
+        </footer>
     </body>
 </html>

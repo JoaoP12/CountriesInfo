@@ -1,6 +1,33 @@
+.cardprincipal {
+    text-align: center;
+}
+.titulo {
+    color:white;
+}
+.imgprincipal {
+    max-width: 640px; 
+    max-height: 317px;
+}
+.titulocard {
+    text-align: center;
+}
+.link{
+    color: white;
+}
+.error {
+    text-align: center; 
+    color: red;
+}
+li {
+    list-style: none;
+}
 .card {
     margin-bottom: 10px;
     height: 100%;
     min-height: 400px;
     background: radial-gradient(circle at 50% -4.19%, #63c5ab 0, #5ac6b3 6.25%, #51c6bb 12.5%, #49c6c3 18.75%, #43c5cb 25%, #3fc5d2 31.25%, #3fc4d9 37.5%, #42c3df 43.75%, #48c2e5 50%, #51c1ea 56.25%, #5cbfee 62.5%, #67bdf1 68.75%, #73bbf3 75%, #80b8f4 81.25%, #8db6f5 87.5%, #99b3f4 93.75%, #a5b0f2 100%);
+}
+footer{
+    background: radial-gradient(circle at 50% -4.19%, #63c5ab 0, #5ac6b3 6.25%, #51c6bb 12.5%, #49c6c3 18.75%, #43c5cb 25%, #3fc5d2 31.25%, #3fc4d9 37.5%, #42c3df 43.75%, #48c2e5 50%, #51c1ea 56.25%, #5cbfee 62.5%, #67bdf1 68.75%, #73bbf3 75%, #80b8f4 81.25%, #8db6f5 87.5%, #99b3f4 93.75%, #a5b0f2 100%);
+    text-align: center;
 }
