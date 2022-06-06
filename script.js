@@ -41,7 +41,7 @@ function loadCountry(country, node=document) {
     const name = getCountryName(country);
     const languages = Object.values(country.languages).map(getLanguageName);
     const flagURL = country.flags.png;
-    const continents = country.continents.map(getContinent);
+    const continents = Object.values(country.continents).map(getContinent);
     const capitals = country.capital;
 
     node.querySelector("#country-name").innerText = name;
