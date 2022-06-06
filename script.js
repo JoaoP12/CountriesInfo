@@ -80,8 +80,8 @@ function getContinent(continent) {
         "Latin America": "América Latina",
         "Europe": "Europa",
         "Asia": "Ásia",
-        "Afrika": "África",
-        "Oceania": "Oceania"
+        "Africa": "África",
+        "Oceania": "Oceânia"
     }
     return continents[continent];
 }
