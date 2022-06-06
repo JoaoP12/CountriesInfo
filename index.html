@@ -6,55 +6,58 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Países</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <link rel="stylesheet" href="./style.css">
         <script type="text/javascript" src="./script.js"></script>
     </head>
-    <body style="background-image: radial-gradient(circle at 50% -4.19%, #63c5ab 0, #5ac6b3 6.25%, #51c6bb 12.5%, #49c6c3 18.75%, #43c5cb 25%, #3fc5d2 31.25%, #3fc4d9 37.5%, #42c3df 43.75%, #48c2e5 50%, #51c1ea 56.25%, #5cbfee 62.5%, #67bdf1 68.75%, #73bbf3 75%, #80b8f4 81.25%, #8db6f5 87.5%, #99b3f4 93.75%, #a5b0f2 100%);">
-        <header class="container" style="background-image: radial-gradient(circle at 50% -4.19%, #63c5ab 0, #5ac6b3 6.25%, #51c6bb 12.5%, #49c6c3 18.75%, #43c5cb 25%, #3fc5d2 31.25%, #3fc4d9 37.5%, #42c3df 43.75%, #48c2e5 50%, #51c1ea 56.25%, #5cbfee 62.5%, #67bdf1 68.75%, #73bbf3 75%, #80b8f4 81.25%, #8db6f5 87.5%, #99b3f4 93.75%, #a5b0f2 100%);">
-            <h1 style="color:white;text-align:center;">InfoCountries</h1>
-            <div style="text-align: center;background-color: #3A98BA;" class="card" style="width: 18rem;">
-                <img style="display: block; margin-left: auto;margin-right: auto; max-width: 640px; max-height: 317px;" src="Paises.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 style="text-align: center;" class="card-title">InfoCountries</h5>
-                    <p>
-                        Atualmente existem 193 países
-                    </p>
-                    <h3>Mas o que é um país?
-                    </h3>
-                    <p>País faz referência a uma unidade polítiica que possui um território definifo, uma forma de governo, capacidade de ter relações comerciais e política com outras nações e ser reconhecido pelos demais países</p>
-                    <p>
-                        Você conhece todos os países?
-                    </p>
-                    <p></p>
-                    <p class="card-text">Caso queira conhecer algum, basta escrever o nome dele abaixo, mas precisa ser em inglês. Se não souber, use o tradutor
-                        <a style="color: white;" href="https://translate.google.com" target="_blank">AQUI</a>
-                    </p>
-                    <input type="text" id="country-name">
-                    <input class="btn btn-primary " type="button" value="Buscar" onclick="buscarPais()">
+    <body>
+        <div class="container p-3">
+            <header>
+                <div style="text-align: center;background-color: #3A98BA;" class="card p-3">
+                    <h1 style="color:white;">InfoCountries</h1>
+                    <img class="card-img-top mx-auto" style="max-width: 640px; max-height: 317px;" src="./Paises.png" alt="...">
+                    <div class="card-body w-50 mx-auto">
+                        <h5 style="text-align: center;" class="card-title">InfoCountries</h5>
+                        <p>
+                            Atualmente existem 193 países
+                        </p>
+                        <h3>Mas o que é um país?
+                        </h3>
+                        <p>País faz referência a uma unidade polítiica que possui um território definifo, uma forma de governo, capacidade de ter relações comerciais e política com outras nações e ser reconhecido pelos demais países</p>
+                        <p>
+                            Você conhece todos os países?
+                        </p>
+                        <p></p>
+                        <p class="card-text">Caso queira conhecer algum, basta escrever o nome dele abaixo, mas precisa ser em inglês. Se não souber, use o tradutor
+                            <a style="color: white;" href="https://translate.google.com" target="_blank">AQUI</a>
+                        </p>
+                        <input type="text" id="country-name">
+                        <input class="btn btn-primary " type="button" value="Buscar" onclick="buscarPais()">
+                    </div>
                 </div>
+                <h3></h3>
+            </header>
+            <div style="text-align: center; color: red;" id="error">
+                <h4 id="error-msg">País não encontrado</h4>
             </div>
-            <h3></h3>
-        </header>
-        <div style="text-align: center; color: red;background-image: radial-gradient(circle at 50% -4.19%, #63c5ab 0, #5ac6b3 6.25%, #51c6bb 12.5%, #49c6c3 18.75%, #43c5cb 25%, #3fc5d2 31.25%, #3fc4d9 37.5%, #42c3df 43.75%, #48c2e5 50%, #51c1ea 56.25%, #5cbfee 62.5%, #67bdf1 68.75%, #73bbf3 75%, #80b8f4 81.25%, #8db6f5 87.5%, #99b3f4 93.75%, #a5b0f2 100%);" id="error">
-            <h4 id="error-msg">País não encontrado</h4>
-        </div>
-        <div id="countries-info" class="d-flex">
-            <div class="card mx-auto info" style="text-align: center;width: 18rem;background-image: radial-gradient(circle at 50% -4.19%, #63c5ab 0, #5ac6b3 6.25%, #51c6bb 12.5%, #49c6c3 18.75%, #43c5cb 25%, #3fc5d2 31.25%, #3fc4d9 37.5%, #42c3df 43.75%, #48c2e5 50%, #51c1ea 56.25%, #5cbfee 62.5%, #67bdf1 68.75%, #73bbf3 75%, #80b8f4 81.25%, #8db6f5 87.5%, #99b3f4 93.75%, #a5b0f2 100%);" id="country-info">
-                <img class="card-img-top" id="country-flag" src="">
-                <div class="card-body">
-                    <h5 class="card-title" id="country-name"></h2>
+            <div id="countries-info" class="d-flex flex-wrap">
+                <div class="card mx-auto info" style="text-align: center;width: 18rem;" id="country-info">
+                    <img class="card-img-top" id="country-flag" src="">
+                    <div class="card-body">
+                        <h5 class="card-title" id="country-name"></h2>
 
-                    <p>
-                        <b>Capital:</b>
-                        <span id="country-capital"></span>
-                    </p>
-                    <p>
-                        <b>Idiomas:</b>
-                        <span id="country-languages"></span>
-                    </p>
-                    <p>
-                        <b>Continente(s):</b>
-                        <span id="country-continents"></span>
-                    </p>
+                        <p>
+                            <b>Capital:</b>
+                            <span id="country-capital"></span>
+                        </p>
+                        <p>
+                            <b>Idiomas:</b>
+                            <span id="country-languages"></span>
+                        </p>
+                        <p>
+                            <b>Continente(s):</b>
+                            <span id="country-continents"></span>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
