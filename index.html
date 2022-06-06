@@ -4,28 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Países</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script type="text/javascript" src="./script.js"></script>
 </head>
 <body>
     <header>
-        <h1>InfoPaíses</h1>
-        <h3>Digite o nome de um país abaixo (<a href="https://translate.google.com" target="_blank">Em inglês</a>)</h3>
+        <h1 style="color:blue;text-align:center;">InfoCountries</h1>
+        <div style="text-align: center;"class="card" style="width: 18rem;">
+            <img style="max-width: 960px; max-height: 476px"src="https://t5z6q4c2.rocketcdn.me/wp-content/uploads/2020/06/paises-quais-sao-definicao-caracteristicas-e-divisao-por-continentes.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 style="text-align: center;"class="card-title">InfoCountries</h5>
+              <p class="card-text">Digite o nome de um país abaixo (<a href="https://translate.google.com" target="_blank">Em inglês</a>)</p>
+              <input type="text" id="country-name">
+              <input class="btn btn-primary "type="button" value="Buscar" onclick="buscarPais()">
+            </div>
+          </div>
+        <h3></h3>
     </header>
-    <div>
-        <input type="text" id="country-name">
-        <input type="button" value="Buscar" onclick="buscarPais()">
+    <div style="text-align: center; color: red;" id="error">
+        <h4 id="error-msg">País não encontrado</h4>
     </div>
-    <div id="error">
-        <p id="error-msg">País não encontrado</p>
-    </div>
-    <div id="country-info">
+    <div style="text-align: center;" id="country-info">
         <h2 id="country-name"></h2>
         <img id="country-flag" src="">
         <p><b>Capital:</b> <span id="country-capital"></span></p>
         <p><b>Idiomas:</b> <span id="country-languages"></span></p>
         <p><b>Continente(s):</b> <span id="country-continents"></span></p>
-
     </div>
 </body>
 </html>
